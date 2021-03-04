@@ -1,0 +1,218 @@
+/* default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background: #4559da;
+  letter-spacing: 1px;
+  line-height: 140%;
+  position: relative;
+}
+
+h5 {
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+p {
+  font-size: 0.85em;
+  line-height: 130%;
+}
+
+.App {
+  display: flex;
+  padding: 10px;
+  padding: 10px;
+  width: fit-content;
+  user-select: none;
+}
+
+.caption {
+  font-size: 0.7em;
+}
+/* /default */
+
+/* column */
+.columnWrapper {
+  display: flex;
+}
+.column {
+  background: #fff;
+  min-width: 325px;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding: 8px;
+  height: fit-content;
+}
+
+.column_title {
+  margin-top: 10px;
+  word-break: break-all;
+}
+
+.titleChangeInput {
+  display: flex;
+  width: 80%;
+  margin: 10px auto 0;
+  height: 2.16em;
+}
+/* /column */
+
+/* card */
+.card {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  background: #dfdede;
+  box-shadow: 0px 65px 170px rgba(0, 0, 0, 0.03),
+    0px 27.1554px 71.0219px rgba(0, 0, 0, 0.0221299),
+    0px 14.5186px 37.9717px rgba(0, 0, 0, 0.019074),
+    0px 8.13901px 21.2866px rgba(0, 0, 0, 0.0166977),
+    0px 4.32257px 11.3052px rgba(0, 0, 0, 0.0141025),
+    0px 1.79872px 4.70434px rgba(0, 0, 0, 0.0102794);
+  border-radius: 4px;
+  padding: 8px 8px;
+  margin: 10px 0;
+}
+
+.card.orange {
+  background: #ffa500;
+}
+
+.card.yellow {
+  background: #ffff00;
+}
+
+.card.red {
+  background: #ff5959;
+}
+
+.card.gray {
+  background: #dfdede;
+}
+
+.card_title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card .deleted {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.card .deleted::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgb(142, 142, 142);
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.card .deleted::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgb(142, 142, 142);
+  border-radius: 4px;
+  transform: rotate(135deg);
+}
+
+/* /card */
+
+/* all button  */
+.button {
+  border-radius: 4px;
+  border: none;
+  background: rgb(124, 128, 213);
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button.addColumn {
+  width: 325px;
+  height: 75px;
+}
+/* /all button  */
+
+/* modal */
+.modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+  background: #5559;
+  backdrop-filter: blur(3px);
+}
+
+.modal .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 40vw;
+  max-width: 500px;
+  min-width: 320px;
+}
+
+.modal_box .title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.modal_box .deadline,
+.modal_box .description {
+  margin-bottom: 12px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 350px;
+  justify-content: center;
+}
+
+.modal form > .field {
+  outline: none;
+  margin-bottom: 12px;
+  padding: 4px;
+  font-size: 0.8em;
+}
+
+.modal form > .textarea {
+  resize: none;
+}
+/* /modal */
